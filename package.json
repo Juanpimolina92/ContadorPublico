@@ -1,0 +1,17 @@
+{
+  "name": "federico-molina-contador",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio institucional de Federico Molina, contador público.",
+  "scripts": {
+    "build": "sass assets/scss/styles.scss assets/css/styles.css --style=compressed --no-source-map && node scripts/build.mjs",
+    "watch:css": "sass --watch assets/scss/styles.scss:assets/css/styles.css --no-source-map",
+    "dev": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "sass": "1.93.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
