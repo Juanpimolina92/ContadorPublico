@@ -1,3 +1,6 @@
+# ContadorPublico
+landing page para contador publico
+
 # Federico Molina · Contador público
 
 Landing page estática en español con HTML, Sass, CSS compilado, Bootstrap y JavaScript. Diseño adaptable a celulares, tabletas y computadoras, con animaciones que respetan la preferencia de movimiento reducido.
