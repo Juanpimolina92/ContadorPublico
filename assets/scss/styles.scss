@@ -40,6 +40,8 @@ h1 em, h2 em { font-weight: 400; color: $navy; }
 .site-header { position: sticky; top: 0; z-index: 30; background: rgba($white, .98); border-bottom: 1px solid rgba($line, .75); transition: box-shadow .25s; &.is-scrolled { box-shadow: 0 5px 24px rgba($navy, .05); } }
 .header-inner { min-height: 93px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 16px; width: fit-content; color: $navy; }
+// El encuadre SVG elimina los márgenes transparentes sin modificar los PNG originales.
+.brand-logo { display: block; width: 210px; height: 76px; flex-shrink: 0; }
 .brand-monogram { position: relative; font-family: $serif; font-size: 31px; line-height: 1; width: 45px; height: 46px; flex-shrink: 0; span:first-child { position: absolute; top: 0; left: 0; } span:last-child { position: absolute; bottom: 0; right: 0; } }
 .brand-name { border-left: 1px solid $line; padding: 4px 0 4px 17px; font-family: 'Manrope', sans-serif; font-size: 14px; letter-spacing: -.035em; font-weight: 700; line-height: 1.45; span { display: block; font: 500 8px/2 $sans; letter-spacing: .2em; } }
 .site-nav { display: flex; align-items: center; gap: 34px; font-size: 12px; font-weight: 500; > a { position: relative; padding-block: 12px; color: $muted; transition: color .2s; &:hover, &[aria-current] { color: $navy; } &:not(.nav-contact)::after { content: ''; position: absolute; bottom: 4px; left: 0; width: 0; height: 1px; background: $navy; transition: width .2s; } &[aria-current]::after, &:hover::after { width: 100%; } } .nav-contact { display: flex; gap: 22px; align-items: center; color: $white; background: $navy; padding: 12px 20px; border-radius: 3px; margin-left: 6px; .icon { width: 17px; height: 17px; } &:hover, &[aria-current] { color: $white; background: $navy-light; } } }
@@ -54,11 +56,8 @@ h1 em, h2 em { font-weight: 400; color: $navy; }
 .hero-visual { position: relative; padding: 16px 35px 26px 26px; }
 .hero-photo { position: relative; height: 500px; margin: 0; border-radius: 2px 88px 2px 2px; overflow: hidden; background: #cbd8df; img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; filter: saturate(.48); } &::after { position: absolute; inset: 0; content: ''; background: linear-gradient(180deg, rgba($navy-deep, 0) 40%, rgba($navy-deep, .82) 100%); } figcaption { position: absolute; z-index: 1; bottom: 33px; left: 31px; color: $white; span { display: block; &:first-child { font-size: 9px; letter-spacing: .19em; font-weight: 500; margin-bottom: 8px; } &:last-child { font-family: $serif; font-size: 29px; font-style: italic; } } } }
 .hero-brand { background: $navy; &::after { background: linear-gradient(180deg, transparent 45%, rgba($navy-deep, .46)); } }
-.brand-art { position: absolute; inset: 0; display: flex; align-items: center; flex-direction: column; color: $white; padding-top: 55px; overflow: hidden; }
-.art-monogram { position: relative; width: 173px; height: 203px; font: 400 151px/1 $serif; span:first-child { position: absolute; left: 0; top: 0; } span:last-child { position: absolute; right: -7px; bottom: 0; font-size: 139px; } }
-.art-name { margin-top: 26px; font: 500 12px/1.5 'Manrope', sans-serif; letter-spacing: .3em; }
-.art-profession { margin-top: 9px; font-size: 8px; letter-spacing: .35em; color: #d0e2ed; }
-.art-line { width: 33px; height: 1px; background: #a3c1d4; margin-top: 25px; }
+.brand-art { position: absolute; inset: 0; overflow: hidden; }
+.hero-logo { position: absolute; top: 32px; left: 15%; width: 70%; height: calc(100% - 230px); }
 .art-corner { position: absolute; width: 140px; height: 140px; opacity: .25; background-image: radial-gradient(circle, #fff 1.5px, transparent 2px); background-size: 12px 12px; transform: rotate(-9deg); }
 .art-corner-top { top: -47px; left: -44px; mask-image: linear-gradient(130deg, #000, transparent); }
 .art-corner-bottom { right: -30px; bottom: -33px; mask-image: linear-gradient(-45deg, #000, transparent); }
@@ -158,6 +157,7 @@ textarea.form-control { min-height: 93px; resize: vertical; }
   .container { padding-inline: 24px; }
   .header-inner { gap: 15px; min-height: 74px; }
   .brand { gap: 12px; }
+  .brand-logo { width: 175px; height: 63px; }
   .brand-monogram { font-size: 28px; width: 41px; height: 43px; }
   .brand-name { font-size: 12px; padding-left: 12px; span { font-size: 7px; } }
   .hero { padding-top: 34px; }
@@ -174,11 +174,7 @@ textarea.form-control { min-height: 93px; resize: vertical; }
   .hero-photo { height: 365px; border-top-right-radius: 65px; figcaption { left: 24px; bottom: 24px; span:last-child { font-size: 26px; } } }
   .image-outline { right: 13px; border-top-right-radius: 73px; }
   .hero-note { padding: 12px 15px; left: 4px; bottom: 118px; font-size: 9px; gap: 10px; }
-  .brand-art { padding-top: 28px; }
-  .art-monogram { width: 113px; height: 134px; font-size: 98px; span:last-child { font-size: 90px; right: -4px; } }
-  .art-name { margin-top: 15px; font-size: 10px; }
-  .art-profession { font-size: 7px; margin-top: 7px; }
-  .art-line { display: none; }
+  .hero-logo { top: 20px; left: 14%; width: 72%; height: calc(100% - 182px); }
   .vertical-caption { right: 0; font-size: 7px; }
   .hero-values { gap: 12px; padding: 23px 0; margin-top: 15px; > div { flex-direction: column; gap: 7px; font-size: 9px; line-height: 1.65; &:not(:first-child) { padding-left: 12px; } strong { margin-top: 0; } } .value-number { font-size: 16px; } }
   .section-space { padding-block: 62px; }
