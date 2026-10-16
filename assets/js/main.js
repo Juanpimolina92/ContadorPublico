@@ -55,7 +55,7 @@
     });
   };
 
-  const sections = ['inicio', 'servicios', 'enfoque', 'instagram', 'contacto']
+  const sections = ['inicio', 'servicios', 'gestion', 'enfoque', 'instagram', 'contacto']
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 
@@ -129,7 +129,7 @@
   const messageField = form.elements.namedItem('message');
   const formStatus = document.getElementById('form-status');
   const fallbackLink = document.getElementById('whatsapp-fallback');
-  const services = new Set(['Contabilidad integral', 'Impuestos y planificación fiscal', 'Sueldos y cargas sociales', 'Otra consulta']);
+  const services = new Set(['Contabilidad integral', 'Impuestos y planificación fiscal', 'Sueldos y cargas sociales', 'Gestión y crecimiento de mi negocio', 'Otra consulta']);
 
   [nameField, serviceField, messageField].forEach((field) => {
     field?.addEventListener('input', () => field.setCustomValidity(''));

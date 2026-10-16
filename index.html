@@ -24,10 +24,12 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/gestion.js" defer></script>
     <noscript>
         <style>
             #contact-form,
-            .nav-toggle {
+            .nav-toggle,
+            .dashboard-interactive {
                 display: none !important
             }
 
@@ -100,6 +102,15 @@
         </symbol>
     </svg>
     <header class="site-header">
+        <div class="header-affiliation">
+            <div class="container">
+                <a href="https://www.instagram.com/comisionjovenessj/" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg>
+                    <span>Subcoordinador en <strong>@comisionjovenessj</strong></span>
+                    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg>
+                </a>
+            </div>
+        </div>
         <div class="container header-inner">
             <a class="brand" href="#inicio" aria-label="Federico Molina, inicio">
                 <svg class="brand-logo" viewBox="78 174 686 247" role="img"
@@ -111,7 +122,7 @@
                 aria-controls="primary-navigation"><span></span><span></span></button>
             <nav class="site-nav" id="primary-navigation" aria-label="Navegación principal"><a href="#inicio"
                     data-nav-link aria-current="location">Inicio</a><a href="#servicios" data-nav-link>Servicios</a><a
-                    href="#enfoque" data-nav-link>Mi enfoque</a><a href="#instagram" data-nav-link>Instagram</a><a
+                    href="#gestion" data-nav-link>Potenciá tu negocio</a><a href="#enfoque" data-nav-link>Mi enfoque</a><a href="#instagram" data-nav-link>Instagram</a><a
                     class="nav-contact" href="#contacto" data-nav-link>Hablemos <svg class="icon" aria-hidden="true">
                         <use href="#i-arrow-up" />
                     </svg></a></nav>
@@ -125,7 +136,8 @@
                         <p class="eyebrow"><span class="eyebrow-line"></span> CONTABILIDAD CON UNA MIRADA CERCANA</p>
                         <h1 id="hero-title">Tus números claros.<br>Tu próximo paso,<br><em>con confianza.</em></h1>
                         <p class="hero-description">La tranquilidad de entender dónde estás y saber cómo seguir.
-                            Asesoramiento contable e impositivo, de persona a persona.</p>
+                            Asesoramiento contable, impositivo y herramientas de gestión para hacer crecer tu negocio,
+                            de persona a persona.</p>
                         <div class="hero-actions"><a class="btn btn-navy"
                                 href="https://wa.me/5492645299575?text=Hola%20Federico%2C%20quisiera%20hacerte%20una%20consulta."
                                 target="_blank" rel="noopener noreferrer">Hablemos de tu proyecto <svg class="icon"
@@ -177,7 +189,7 @@
                     </div>
                     <div class="col-lg-5">
                         <p class="section-intro">Contabilidad, impuestos y gestión laboral. Un acompañamiento integral
-                            para las necesidades de tu empresa.</p>
+                            para las necesidades de tu empresa. Y una mirada sobre la gestión para ayudarte a crecer.</p>
                     </div>
                 </div>
                 <!-- Servicios tomados de la captura de Instagram proporcionada por el usuario. -->
@@ -247,6 +259,99 @@
                             aria-hidden="true">
                             <use href="#i-arrow" />
                         </svg></a></div>
+            </div>
+        </section>
+        <section class="growth section-space" id="gestion" aria-labelledby="growth-title">
+            <div class="container">
+                <div class="growth-heading" data-reveal>
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow-line"></span> GESTIÓN PARA CRECER</p>
+                        <h2 id="growth-title">Conocé tu negocio.<br><em>Descubrí su potencial.</em></h2>
+                    </div>
+                    <div class="growth-intro">
+                        <p>Qué vendés más, cuánto te queda y dónde hay una oportunidad. Transformemos la información
+                            de tu negocio en decisiones para mejorar tus ventas y ordenar tu día a día.</p>
+                        <a class="text-link" href="#dashboard-demo">Explorá un ejemplo <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                    </div>
+                </div>
+
+                <div class="dashboard-demo" id="dashboard-demo" aria-labelledby="dashboard-title" data-reveal>
+                    <div class="demo-caption"><span class="demo-label">DEMO INTERACTIVA</span><span>Datos ficticios para explorar posibilidades</span></div>
+                    <div class="dashboard-toolbar dashboard-interactive">
+                        <div class="business-switch" role="group" aria-label="Elegí un tipo de negocio">
+                            <button type="button" data-business="comercio" aria-pressed="true">Comercio</button>
+                            <button type="button" data-business="servicios" aria-pressed="false">Servicios</button>
+                            <button type="button" data-business="emprendimiento" aria-pressed="false">Emprendimiento</button>
+                        </div>
+                        <div class="dashboard-period"><label for="dashboard-period">Período</label><select id="dashboard-period">
+                            <option value="semana">Semana de ejemplo</option>
+                            <option value="mes" selected>Mes de ejemplo</option>
+                            <option value="trimestre">Trimestre de ejemplo</option>
+                        </select></div>
+                    </div>
+                    <div class="dashboard-surface">
+                        <div class="dashboard-heading">
+                            <div class="dashboard-identity"><span class="dashboard-mark" aria-hidden="true"><svg class="icon"><use href="#i-chart" /></svg></span>
+                                <div><p id="dashboard-business">COMERCIO · PANEL DE GESTIÓN</p><h3 id="dashboard-title">Una mirada a tu actividad</h3></div>
+                            </div>
+                            <span class="dashboard-currency">Importes en ARS</span>
+                        </div>
+                        <div class="dashboard-metrics">
+                            <div class="dashboard-metric"><span id="metric-revenue-label">Ventas del período</span><strong id="metric-revenue">$ 2.152.000</strong><small id="metric-revenue-note">Mes de ejemplo</small></div>
+                            <div class="dashboard-metric"><span>Margen bruto estimado</span><strong id="metric-margin">42 %</strong><small id="metric-margin-note">Ventas menos costos directos</small></div>
+                            <div class="dashboard-metric"><span id="metric-volume-label">Ventas realizadas</span><strong id="metric-volume">184</strong><small id="metric-volume-note">Ticket promedio: $ 11.696</small></div>
+                            <div class="dashboard-metric"><span>Saldo por cobrar</span><strong id="metric-pending">$ 258.240</strong><small id="metric-pending-note">3 cuentas para seguir</small></div>
+                        </div>
+                        <div class="dashboard-main">
+                            <div class="dashboard-chart-panel">
+                                <div class="dashboard-panel-heading"><h4 id="chart-title">Evolución de ventas</h4><span id="chart-total">Total del mes</span></div>
+                                <div class="dashboard-chart" id="revenue-chart" role="img" aria-label="Ventas de ejemplo por semana">
+                                    <div class="chart-column"><span class="chart-value">$ 440 mil</span><span class="chart-bar" style="--bar-height: 69%"></span><span class="chart-label">Sem. 1</span></div>
+                                    <div class="chart-column"><span class="chart-value">$ 510 mil</span><span class="chart-bar" style="--bar-height: 80%"></span><span class="chart-label">Sem. 2</span></div>
+                                    <div class="chart-column"><span class="chart-value">$ 562 mil</span><span class="chart-bar" style="--bar-height: 88%"></span><span class="chart-label">Sem. 3</span></div>
+                                    <div class="chart-column"><span class="chart-value">$ 640 mil</span><span class="chart-bar chart-bar-highlight" style="--bar-height: 100%"></span><span class="chart-label">Sem. 4</span></div>
+                                </div>
+                            </div>
+                            <aside class="dashboard-insight" aria-labelledby="insight-title">
+                                <span class="insight-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg> UNA OPORTUNIDAD</span>
+                                <h4 id="insight-title">Tu producto más vendido puede abrir otra venta.</h4>
+                                <p id="insight-copy">La línea Hogar concentra el 42 % de tus ingresos de ejemplo. Probá una propuesta con productos complementarios y medí el resultado.</p>
+                                <span class="insight-footnote">Una lectura posible de estos datos ficticios.</span>
+                            </aside>
+                        </div>
+                        <div class="dashboard-bottom">
+                            <div class="dashboard-ranking">
+                                <div class="dashboard-panel-heading"><h4 id="ranking-title">Tus líneas con más ventas</h4><span>Distribución de ingresos</span></div>
+                                <div class="dashboard-table-wrap"><table class="dashboard-table"><caption class="visually-hidden" id="ranking-caption">Ingresos ficticios por línea de productos</caption>
+                                    <thead><tr><th scope="col" id="ranking-item-label">Línea</th><th scope="col">Ingresos</th><th scope="col">Participación</th></tr></thead>
+                                    <tbody id="ranking-body"><tr><th scope="row">Hogar</th><td>$ 903.840</td><td>42 %</td></tr><tr><th scope="row">Accesorios</th><td>$ 710.160</td><td>33 %</td></tr><tr><th scope="row">Regalería</th><td>$ 538.000</td><td>25 %</td></tr></tbody>
+                                </table></div>
+                            </div>
+                            <div class="dashboard-collections">
+                                <div class="dashboard-panel-heading"><h4>Cobranzas para seguir</h4><span>Cuentas de ejemplo</span></div>
+                                <ul id="collections-list"><li><span><strong>Cliente A</strong><small>Saldo pendiente</small></span><b>$ 129.120</b></li><li><span><strong>Cliente B</strong><small>Saldo pendiente</small></span><b>$ 77.472</b></li><li><span><strong>Cliente C</strong><small>Saldo pendiente</small></span><b>$ 51.648</b></li></ul>
+                            </div>
+                        </div>
+                        <p class="dashboard-status visually-hidden" id="dashboard-status" role="status" aria-live="polite" aria-atomic="true"></p>
+                    </div>
+                    <p class="dashboard-disclaimer">Ejemplo ilustrativo. El panel definitivo se diseña según tu actividad, tus datos y los indicadores que necesitás seguir.
+                        El margen mostrado contempla solo costos directos; no equivale a la ganancia neta.</p>
+                    <noscript><p class="dashboard-disclaimer">Activá JavaScript para cambiar el tipo de negocio y el período. Arriba podés ver el ejemplo de comercio.</p></noscript>
+                </div>
+
+                <div class="growth-tools-heading" data-reveal><p class="eyebrow">HERRAMIENTAS SEGÚN TU ACTIVIDAD</p><h3>Más control hoy. Más posibilidades mañana.</h3><p>Podemos trabajar sobre estos módulos y definir juntos cuáles necesita tu negocio.</p></div>
+                <div class="growth-tools">
+                    <article class="growth-tool" data-reveal><span>01 / VENTAS</span><h4>Vendé con información.</h4><p>Seguí tus ventas, compará períodos y conocé el ticket promedio para detectar qué acciones conviene probar.</p></article>
+                    <article class="growth-tool" data-reveal><span>02 / PRODUCTOS</span><h4>Conocé qué te rinde.</h4><p>Analizá costos, precios y márgenes. Identificá los productos con mayor rotación y planificá la reposición de stock.</p></article>
+                    <article class="growth-tool" data-reveal><span>03 / CLIENTES</span><h4>Cuidá cada relación.</h4><p>Centralizá contactos, historial de compras y presupuestos para dar seguimiento y encontrar oportunidades de recompra.</p></article>
+                    <article class="growth-tool" data-reveal><span>04 / COBRANZAS</span><h4>Ordená lo que entra.</h4><p>Consultá cuentas corrientes, registrá cobros y organizá vencimientos para tener una lectura clara de tu caja.</p></article>
+                    <article class="growth-tool" data-reveal><span>05 / ORGANIZACIÓN</span><h4>Anticipá tu semana.</h4><p>Reuní tareas, pedidos y entregas en una agenda. Definí responsables y próximos pasos para que nada quede en el aire.</p></article>
+                    <article class="growth-tool" data-reveal><span>06 / DECISIONES</span><h4>Planificá el próximo paso.</h4><p>Armá un tablero con objetivos, evolución de ingresos y escenarios de caja para decidir con más perspectiva.</p></article>
+                </div>
+                <div class="growth-cta" data-reveal>
+                    <div><span>EMPECEMOS POR TU NEGOCIO</span><h3>¿Qué te gustaría mejorar primero?</h3><p>Contame cómo trabajás y pensemos una solución a tu medida.</p></div>
+                    <a class="btn btn-navy" href="https://wa.me/5492645299575?text=Hola%20Federico%2C%20quiero%20conocer%20las%20herramientas%20de%20gesti%C3%B3n%20para%20potenciar%20mi%20negocio." target="_blank" rel="noopener noreferrer">Quiero potenciar mi negocio <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg></a>
+                </div>
             </div>
         </section>
         <section class="approach section-space" id="enfoque" aria-labelledby="approach-title">
@@ -390,6 +495,7 @@
                                         <option value="Impuestos y planificación fiscal">Impuestos y planificación
                                             fiscal</option>
                                         <option value="Sueldos y cargas sociales">Sueldos y cargas sociales</option>
+                                        <option value="Gestión y crecimiento de mi negocio">Gestión y crecimiento de mi negocio</option>
                                         <option value="Otra consulta">Otra consulta</option>
                                     </select></div>
                                 <div class="mb-4"><label for="contact-message" class="form-label">Tu consulta <span
